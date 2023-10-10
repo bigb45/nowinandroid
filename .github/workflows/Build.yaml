@@ -45,7 +45,7 @@ jobs:
 
       - name: Build all build type and flavor permutations
         run: ./gradlew assemble --max-workers=1
-            -Pandroidx.benchmark.enabledRules=BaselineProfile
+            -Pandroid.testInstrumentationRunnerArguments.androidx.benchmark.enabledRules=BaselineProfile
             -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect"
             -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=180
             -Pandroid.experimental.androidTest.numManagedDeviceShards=1
